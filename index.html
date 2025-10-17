@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B1 Member Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>B1 Member Portal</h1>
+    <nav>
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('about')">About</a>
+      <a href="#" onclick="showPage('verification')">Verification</a>
+      <a href="#" onclick="showPage('feedback')">Feedback</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <!-- ===== HOME ===== -->
+  <section id="home" class="container">
+    <h2>Welcome to B1</h2>
+    <p>Fast and reliable financial platform. Invest, loan, and grow your future with B1.</p>
+    <div class="stats">
+      <h3>Live Investment Flow</h3>
+      <p id="liveNumber">₱8,500,000</p>
+      <p>Your Account Balance: <strong id="balance">₱0.00</strong></p>
+      <button id="membershipBtn" onclick="goToVerification()">Become a Member (₱879)</button>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="container hidden">
+    <h2>About B1</h2>
+    <p>B1 is a trusted financial platform offering loans, investments, and trading services nationwide.</p>
+  </section>
+
+  <!-- ===== VERIFICATION ===== -->
+  <section id="verification" class="container hidden">
+    <h2>Membership Verification</h2>
+    <p>Please upload a proof of your ₱150 membership payment. Verification takes <strong>24 hours</strong> after upload.</p>
+
+    <form id="verifyForm">
+      <label for="proofUpload">Upload Image Proof:</label><br>
+      <input type="file" id="proofUpload" accept="image/*" required><br><br>
+      <button type="submit">Submit Proof</button>
+    </form>
+
+    <div id="verifyStatus"></div>
+  </section>
+
+  <!-- ===== FEEDBACK ===== -->
+  <section id="feedback" class="container hidden">
+    <h2>Member Feedback</h2>
+
+    <div class="review">
+      <h4>⭐⭐⭐⭐⭐ (Tagalog)</h4>
+      <p>“Napakabilis ng proseso!”<br>
+      Ang B1 ang pinaka-maaasahan pagdating sa loan. Wala nang mahabang pila, mabilis ang approval, at malinaw ang terms. Sobrang satisfied ako sa serbisyo nila!</p>
+    </div>
+
+    <div class="review">
+      <h4>⭐⭐⭐⭐⭐ (Bisaya)</h4>
+      <p>“Dali ra kaayo ang transaction!”<br>
+      Nakakuha ko ug loan sa B1 in less than 10 minutes. Wala’y libog, limpyo ang proseso. Maayo kaayo ilang customer service, saludo ko!</p>
+    </div>
+
+    <div class="review">
+      <h4>⭐⭐⭐⭐⭐ (Hiligaynon)</h4>
+      <p>“Wala gid ko nagsisi nga nag-invest sa B1!”<br>
+      Ang returns stable kag maayo. Klaro ang updates kag honest ang mga staff. Daw indi mo gid pag-idlangan magbutang sang imo kwarta diri.</p>
+    </div>
+
+    <div class="review">
+      <h4>⭐⭐⭐⭐⭐ (Tagalog)</h4>
+      <p>“Legit at mapagkakatiwalaan!”<br>
+      Sa dami ng online platform ngayon, sa B1 lang ako kampante. Transparent sa lahat ng details, at mabilis pa mag-release ng funds.</p>
+    </div>
+
+    <div class="review">
+      <h4>⭐⭐⭐⭐⭐ (Bisaya)</h4>
+      <p>“Angayan kaayo ni para sa gusto mag-invest!”<br>
+      Gi-guide ka nila sa tanan. Makita gyud nimo ang tubo sa imong kwarta. Walay lipod-lipod, diretso gyud nga negosyo!</p>
+    </div>
+
+    <div class="review">
+      <h4>⭐⭐⭐⭐⭐ (Hiligaynon)</h4>
+      <p>“Nami gid ang experience ko sa trading!”<br>
+      Simple lang ang platform pero powerful. Kahit beginner ka, dali lang masabtan kag makita mo dayon ang resulta sang imo trades.</p>
+    </div>
+
+    <div class="review">
+      <h4>⭐⭐⭐⭐⭐ (Tagalog)</h4>
+      <p>“B1 helped me grow my small business.”<br>
+      Dahil sa kanilang loan service, nakadagdag ako ng kapital. Walang hassle, at mababait ang mga staff na tumulong sa akin.</p>
+    </div>
+
+    <div class="review">
+      <h4>⭐⭐⭐⭐⭐ (Bisaya)</h4>
+      <p>“Sulit gyud akong kasaligan sa B1!”<br>
+      Nakasuway nako ug withdraw sa akong earnings, smooth kaayo. Wala gyud problema, legit nga trading platform!</p>
+    </div>
+
+    <div class="review">
+      <h4>⭐⭐⭐⭐⭐ (Hiligaynon)</h4>
+      <p>“Mapisan kag matinud-anon nga serbisyo.”<br>
+      Indi pareho sang iban nga app nga dugay mag-response. Ang B1, madali lang kontakon kag maayo magpasabat sa inquiries.</p>
+    </div>
+
+    <div class="review">
+      <h4>⭐⭐⭐⭐⭐ (English)</h4>
+      <p>“Truly a 5-star financial platform!”<br>
+      B1 offers fast loans, reliable investments, and safe trading. I’ve trusted them for months now and I’m happy with every transaction. Highly recommended!</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
