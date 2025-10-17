@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>B1 Account</title>
+  <meta name="description" content="B1 Account — Investment, Trade and Loan platform demo" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>B1 Account</h1>
+  </header>
+
+  <!-- Navigation bar (hidden before login) -->
+  <nav id="menu" class="hidden">
+    <a href="#" onclick="showPage('home');return false;">HOME</a>
+    <a href="#" onclick="showPage('about');return false;">ABOUT</a>
+    <a href="#" onclick="showPage('contact');return false;">CONTACT INFO</a>
+    <a href="#" onclick="logout();return false;">LOG OUT</a>
+  </nav>
+
+  <!-- LOGIN PAGE -->
+  <section id="login-page" class="login-box">
+    <h2>Login</h2>
+    <input id="phone" type="text" placeholder="Phone Number" />
+    <input id="password" type="password" placeholder="Password" />
+    <button onclick="login()">Log In</button>
+  </section>
+
+  <!-- HOME PAGE -->
+  <section id="home" class="container hidden">
+    <h2>Welcome to B1 Investment Platform</h2>
+    <p>Live Investment Range: <strong id="liveAmount">₱8,500,000</strong></p>
+
+    <table class="table">
+      <thead>
+        <tr><th>Type</th><th>Value</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Market Growth</td><td id="growth">+2.5%</td></tr>
+        <tr><td>Loan Volume</td><td id="loanVolume">₱5,000,000</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Your Account Balance: ₱<span id="balance">0.00</span></h3>
+
+    <button onclick="showPage('membership')">One-Time Membership ₱879</button>
+  </section>
+
+  <!-- ABOUT PAGE -->
+  <section id="about" class="container hidden">
+    <h2>About B1</h2>
+    <p>B1 is all about <strong>Investment, Trade, and Loan.</strong> We provide opportunities for users to invest and grow financially with transparency.</p>
+  </section>
+
+  <!-- CONTACT PAGE -->
+  <section id="contact" class="container hidden">
+    <h2>Contact Info</h2>
+    <p>Visit our Facebook page:</p>
+    <p>
+      <a href="https://www.facebook.com/share/1ZSzFCtDyx/?mibextid=wwXIfr" target="_blank">
+        https://www.facebook.com/share/1ZSzFCtDyx/?mibextid=wwXIfr
+      </a>
+    </p>
+  </section>
+
+  <!-- MEMBERSHIP PAGE -->
+  <section id="membership" class="container hidden qr">
+    <h2>Membership Payment</h2>
+    <p>Pay ₱879.00 using the QR Code below:</p>
+
+    <img 
+      src="https://github.com/B1tradeloan/B1-Account/raw/18fbf974071d47046643c5b32dc2314dcd25b0da/IMG_9339.jpeg" 
+      alt="Membership QR Code" width="280" />
+
+    <p><button onclick="receiptSent()">I've Sent the Payment</button></p>
+  </section>
+
+  <!-- RECEIPT PAGE -->
+  <section id="receipt" class="container hidden verification">
+    <p>Receipt marked as sent.</p>
+    <p>Redirecting to verification page...</p>
+  </section>
+
+  <!-- VERIFICATION PAGE -->
+  <section id="verification" class="container hidden verification">
+    <p>Your payment is <strong>FOR VERIFICATION</strong>.</p>
+    <p>Please wait for confirmation. You will receive your ₱1000 bonus once approved.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
